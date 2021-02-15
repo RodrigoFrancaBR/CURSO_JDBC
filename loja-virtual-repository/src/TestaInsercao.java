@@ -8,6 +8,7 @@ public class TestaInsercao {
 		int stmFild =1;
 		ConnectionFactory cf = new ConnectionFactory();
 		Connection connection = cf.recuperarConexao();
+		
 		Statement statement = connection.createStatement();
 		
 		

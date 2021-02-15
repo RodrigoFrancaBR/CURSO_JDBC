@@ -34,9 +34,7 @@ public class TestaListagem {
 			System.out.println(id);
 			System.out.println(nome);
 			System.out.println(descricao);
-		}
-
-		
+		}		
 
 		connection.close();
 	}
