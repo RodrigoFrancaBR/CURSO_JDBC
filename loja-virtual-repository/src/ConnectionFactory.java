@@ -11,13 +11,15 @@ public class ConnectionFactory {
 	private String user = "root";
 	private String password = "root";
 	private DataSource dataSource;
+	private int maxPoolSize = 15;
 
 	public ConnectionFactory() {
 		ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource();
 		comboPooledDataSource.setJdbcUrl(jdbcUrl);
 		comboPooledDataSource.setUser(user);
 		comboPooledDataSource.setPassword(password);
-		this.dataSource = comboPooledDataSource;
+		comboPooledDataSource.setMaxPoolSize(maxPoolSize);
+		this.dataSource = comboPooledDataSource; 
 	}
 
 	public Connection recuperarConexao() throws SQLException {
