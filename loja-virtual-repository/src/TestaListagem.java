@@ -15,7 +15,7 @@ public class TestaListagem {
 
 		Statement stm = connection.createStatement();
 
-		// result true se a execução do statemento retornar uma lista
+		// result recebe true se a execução do statemento retornar um ResultSet
 		boolean result = stm.execute("SELECT * from PRODUTO");
 
 		ResultSet resultSet = stm.getResultSet();
