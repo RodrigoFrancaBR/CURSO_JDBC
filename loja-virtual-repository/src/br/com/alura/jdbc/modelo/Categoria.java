@@ -1,6 +1,8 @@
 package br.com.alura.jdbc.modelo;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Categoria implements Serializable {
 	/**
@@ -10,6 +12,8 @@ public class Categoria implements Serializable {
 
 	private Long id;
 	private String nome;
+
+	private List<Produto> listaDeProdutos = new ArrayList<Produto>();
 
 	public Categoria(Long id, String nome) {
 		this.id = id;
@@ -30,6 +34,14 @@ public class Categoria implements Serializable {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public List<Produto> getProdutos() {
+		return this.listaDeProdutos;		
+	}
+
+	public void adicionar(Produto produto) {
+		this.listaDeProdutos.add(produto);
 	}
 
 }

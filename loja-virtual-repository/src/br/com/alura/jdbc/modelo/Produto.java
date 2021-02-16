@@ -2,7 +2,7 @@ package br.com.alura.jdbc.modelo;
 
 public class Produto {
 
-	private Integer id;
+	private Long id;
 	private String nome;
 	private String descricao;
 
@@ -11,10 +11,14 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public Produto(Integer id, String nome, String descricao) {
+	public Produto(Long id, String nome, String descricao) {
 		this.id = id;
 		this.nome = nome;
 		this.descricao = descricao;
+	}
+
+	public Produto(int i, String j, String k) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getNome() {
@@ -33,7 +37,7 @@ public class Produto {
 		this.descricao = descricao;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

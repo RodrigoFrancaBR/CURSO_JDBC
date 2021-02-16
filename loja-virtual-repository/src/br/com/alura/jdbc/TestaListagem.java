@@ -25,7 +25,7 @@ public class TestaListagem {
 		 */
 		while (resultSet.next()) {
 			stmFild =1;
-			int id = resultSet.getInt(stmFild++);
+			Long id = resultSet.getLong(stmFild++);
 			String nome = resultSet.getString(stmFild++);
 			String descricao = resultSet.getString(stmFild++);
 			System.out.println(id);

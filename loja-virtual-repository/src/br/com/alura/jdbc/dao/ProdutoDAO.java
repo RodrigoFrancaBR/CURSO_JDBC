@@ -27,7 +27,7 @@ public class ProdutoDAO {
 			pstm.execute();
 			try (ResultSet rs = pstm.getGeneratedKeys()) {
 				while (rs.next()) {
-					produto.setId(rs.getInt(1));
+					produto.setId(rs.getLong(1));
 				}
 			}
 
